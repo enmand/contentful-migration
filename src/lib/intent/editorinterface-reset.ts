@@ -10,7 +10,11 @@ export default class EditorInterfaceResetIntent extends Intent {
   }
   groupsWith (other: Intent): boolean {
     const sameContentType = other.getContentTypeId() === this.getContentTypeId()
-    return other.isEditorInterfaceReset() && sameContentType
+    return (
+        other.isEditorInterfaceCopy() ||
+        other.isEditorInterfaceReset() ||
+        other.isEditorInterfaceUpdate()) &&
+        sameContentType
   }
   endsGroup (): boolean {
     return false

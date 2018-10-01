@@ -227,7 +227,6 @@ describe('Payload builder', function () {
       ]
 
       const requests = await buildPayloads(migration, existingCts)
-      debugger
       expect(requests).to.eql([[{
         url: '/content_types/book',
         method: 'PUT',
