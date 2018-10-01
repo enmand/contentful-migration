@@ -28,7 +28,6 @@ describe('EditorInterfaceUpdateIntent', function () {
         ct.changeEditorInterface('name', 'markdown')
           .changeEditorInterface('description', 'singleLine')
       })
-      debugger
       const message1: PlanMessage = intents[1].toPlanMessage()
       expect(message1).to.eql({
         heading: chalk`Update editor interface for Content Type {bold.yellow test}`,
