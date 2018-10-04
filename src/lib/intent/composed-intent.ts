@@ -4,7 +4,6 @@ import { PlanMessage, Section } from '../interfaces/plan-message'
 import { difference, groupBy, flatten, values, entries } from 'lodash'
 
 function mergeSections (sections: Section[]): Section {
-  debugger
   const sameSections = groupBy(sections, 'heading')
   const mergedSections: Section[] = []
 
